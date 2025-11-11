@@ -37,3 +37,4 @@ RUN apt-get install ripgrep
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
 ENV PATH="$PATH:/root/.local/bin/"
+RUN uvx lean-lsp-mcp # Just to install it

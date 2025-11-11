@@ -79,7 +79,8 @@ def evaluate_lean_fixing():
             name="lean-mcp",
             command="uvx",
             args=[
-                "--offline lean-lsp-mcp",
+                "--offline",
+                "lean-lsp-mcp",
             ],
             cwd = "/workspace/curve25519-dalek-lean-verify"
         )

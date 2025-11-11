@@ -36,3 +36,4 @@ WORKDIR /workspace/curve25519-dalek-lean-verify
 RUN apt-get install ripgrep
 
 RUN curl -LsSf https://astral.sh/uv/install.sh | sh
+ENV PATH="$PATH:/root/.local/bin/"

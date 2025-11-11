@@ -1,6 +1,7 @@
 import subprocess
 from pathlib import Path
 
+from inspect_ai.tool import mcp_server_sandbox
 from inspect_ai import Task, task
 from inspect_ai.agent import react
 from inspect_ai.tool import bash_session, text_editor
@@ -74,11 +75,19 @@ def _get_prompt() -> str:
 
 @task
 def evaluate_lean_fixing():
+    lean_mcp = mcp_server_sandbox(
+            name="lean-mcp",
+            command="uvx",
+            args=[
+                "lean-lsp-mcp",
+            ],
+            cwd = "/workspace/curve25519-dalek-lean-verify"
+        )
     lean_agent = react(
         description="Expert Lean theorem prover",
         prompt=_get_prompt(),
         # TODO Should the timeout be larger?
-        tools=[bash_session(), text_editor()],
+        tools=[bash_session(), text_editor(), lean_mcp()],
         attempts=3,
     )
 

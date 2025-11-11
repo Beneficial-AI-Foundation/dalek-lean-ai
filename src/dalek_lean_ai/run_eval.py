@@ -87,7 +87,7 @@ def evaluate_lean_fixing():
         description="Expert Lean theorem prover",
         prompt=_get_prompt(),
         # TODO Should the timeout be larger?
-        tools=[bash_session(), text_editor(), lean_mcp()],
+        tools=[bash_session(), text_editor(), lean_mcp],
         attempts=3,
     )
 

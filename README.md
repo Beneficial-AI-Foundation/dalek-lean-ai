@@ -1,4 +1,4 @@
-*Archived*
+**Archived**
 
 Moved to https://github.com/Beneficial-AI-Foundation/curve25519-dalek-lean-verify/tree/master/ai-benchmark
 

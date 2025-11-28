@@ -1,3 +1,7 @@
+*Archived*
+
+Moved to https://github.com/Beneficial-AI-Foundation/curve25519-dalek-lean-verify/tree/master/ai-benchmark
+
 # dalek_lean_ai
 
 This repository uses [inspect](https://inspect.aisi.org.uk) to see how many
